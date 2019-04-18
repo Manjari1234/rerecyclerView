@@ -1,15 +1,45 @@
 package adapter;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.n.recyclerview.R;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+import java.util.List;
 
-public class Contactsadapter {
+import de.hdodenhof.circleimageview.CircleImageView;
+import model.Contacts;
+
+public class Contactsadapter extends RecyclerView.Adapter<Contactsadapter.ContactsViewHolder>{
+
+    Context mContext;
+    List<Contacts> contactsList;
+
+    public Contactsadapter(Context mContext, List<Contacts> contactsList) {
+
+        this.mContext = mContext;
+        this.contactsList = contactsList;
+    }
+
+    @NonNull
+    @Override
+    public ContactsViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        return null;
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ContactsViewHolder contactsViewHolder, int i) {
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
 
     public class ContactsViewHolder extends RecyclerView.ViewHolder{
 
