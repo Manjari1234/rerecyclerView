@@ -34,11 +34,16 @@ public class Contactsadapter extends RecyclerView.Adapter<Contactsadapter.Contac
     @Override
     public void onBindViewHolder(@NonNull ContactsViewHolder contactsViewHolder, int i) {
 
+        Contacts contacts = contactsList.get(i);
+        contactsViewHolder.imgProfile.setImageResource(contacts.getImageId());
+        contactsViewHolder.tvName.setText(contacts.getName());
+        contactsViewHolder.tvPhone.setText(contacts.getPhone());
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return contactsList.size();
     }
 
     public class ContactsViewHolder extends RecyclerView.ViewHolder{
@@ -53,6 +58,8 @@ public class Contactsadapter extends RecyclerView.Adapter<Contactsadapter.Contac
             tvName = itemView.findViewById(R.id.tvName);
             tvPhone = itemView.findViewById(R.id.tvPhone);
         }
+
+
     }
 
 }
